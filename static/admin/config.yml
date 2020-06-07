@@ -27,8 +27,21 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pages"
+  - name: "info-pages"
     label: "Pages"
+    folder: "src/pages/info"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-pages"}
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Heading, name: heading, widget: string}
+      - {label: Subheading, name: subheading, widget: string}
+      - {label: Content, name: content, widget: string}
+
+  - name: "pages"
+    label: "Special Pages"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"

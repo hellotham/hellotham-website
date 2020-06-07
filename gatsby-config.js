@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Hello Tham',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Hello Tham is a boutique management consulting firm. We deliver consulting services to clients around the world. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design. We also assist our clients in implementing our recommendations, models and strategies.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
