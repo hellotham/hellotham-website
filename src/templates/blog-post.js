@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+// import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,8 +16,11 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage
 }) => {
   const PostContent = contentComponent || Content
+
+  // console.log(featuredimage)
 
   return (
     <section className="section">
@@ -26,6 +32,15 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <div className="columns">
+              <div className="column is-6">
+                {featuredimage ? (
+                  <figure className="image">
+                    <Img fluid={featuredimage.childImageSharp.fluid} alt={`Featured image for post ${title}`} />
+                  </figure>
+                ) : null}
+              </div>
+            </div>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -52,6 +67,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.object
 }
 
 const BlogPost = ({ data }) => {
@@ -74,6 +90,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
   )
@@ -97,6 +114,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage  {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
