@@ -6,10 +6,9 @@ import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
 
 export const InfoPageTemplate = ({
-  image,
   title,
-  heading,
-  subheading,
+  subtitle,
+  image,
   content
 }) => (
   <div>
@@ -42,7 +41,7 @@ export const InfoPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {heading}
+          {title}
         </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -53,7 +52,7 @@ export const InfoPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {subheading}
+          {subtitle}
         </h3>
       </div>
     </div>
@@ -72,10 +71,9 @@ export const InfoPageTemplate = ({
 )
 
 InfoPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  subtitle: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.string,
 }
 
@@ -85,10 +83,9 @@ const InfoPage = ({ data }) => {
   return (
     <Layout>
       <InfoPageTemplate
-        image={post.frontmatter.image}
         title={post.frontmatter.title}
-        heading={post.frontmatter.heading}
-        subheading={post.frontmatter.subheading}
+        subtitle={post.frontmatter.subtitle}
+        image={post.frontmatter.image}
         content={post.html}
       />
     </Layout>
@@ -107,6 +104,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -114,8 +112,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
       }
     }
   }

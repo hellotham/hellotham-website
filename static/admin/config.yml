@@ -38,7 +38,6 @@ collections:
       - {label: Image, name: image, widget: image}
       - {label: Heading, name: heading, widget: string}
       - {label: Subheading, name: subheading, widget: string}
-      - {label: Content, name: content, widget: string}
 
   - name: "pages"
     label: "Special Pages"
@@ -76,3 +75,13 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      - file: "src/pages/contactus.md"
+        label: "Contact Us"
+        name: "contactus"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Channels, name: channels, widget: "list", fields: [{label: Name, name: name, widget: string}, {label: Icon, name: icon, widget: "image"}, {label: Link, name: link, widget: string}]}
+ 

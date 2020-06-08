@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { InfoPageTemplate } from '../../templates/info-page'
+import { ContactPageTemplate } from '../../templates/contact-page'
 
-const InfoPagePreview = ({ entry, getAsset }) => {
+const ContactPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <InfoPageTemplate
+      <ContactPageTemplate
         title={data.title}
         subtitle={data.subtitle}
         image={getAsset(data.image)}
+        channels={data.channels || [] }
         content={data.content}
       />
     )
@@ -19,11 +20,11 @@ const InfoPagePreview = ({ entry, getAsset }) => {
   }
 }
 
-InfoPagePreview.propTypes = {
+ContactPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default InfoPagePreview
+export default ContactPagePreview
