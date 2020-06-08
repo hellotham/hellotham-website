@@ -1,9 +1,9 @@
 ---
 templateKey: 'info-page'
-path: /about
+path: /info/about
 title: About
 heading: About
-subtitle: About Us
+subheading: About Us
 image: /img/about.jpg
 ---
 # About

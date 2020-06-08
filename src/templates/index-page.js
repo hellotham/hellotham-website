@@ -75,7 +75,7 @@ export const IndexPageTemplate = ({
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <h4 className="subtitle">{mainpitch.description}</h4>
                   </div>
                 </div>
                 <div className="columns">
@@ -161,7 +161,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 4096, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -175,6 +175,7 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
+            title
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
@@ -183,6 +184,7 @@ export const pageQuery = graphql`
               }
             }
             text
+            link
           }
           heading
           description

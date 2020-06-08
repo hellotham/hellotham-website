@@ -20,6 +20,8 @@ const TemplateWrapper = ({ children }) => {
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
         />
+        <link rel="icon" type="image/svg+xml" href="/img/logo.svg"></link>
+        <link rel="alternate icon" href="/img/favicon.ico"></link>
         <link
           rel="icon"
           type="image/png"
@@ -38,7 +40,7 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#cc3366" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />

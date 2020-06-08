@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
@@ -8,6 +9,11 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.text} className="column is-6">
         <section className="section">
           <div className="has-text-centered">
+            <h3>
+              <Link className="button is-large is-primary" to={item.link}>
+                {item.title}
+              </Link>
+            </h3>
             <div
               style={{
                 width: '240px',

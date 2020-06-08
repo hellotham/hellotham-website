@@ -1,14 +1,16 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-// Kaldi logo brand color: #FD461E
 $hellotham-pink: #cc3366
 $hellotham-pink-invert: #ff99cc
+$hellotham-purple: #660099
+$hellotham-purple-shadow: #330033
 
-$primary: $hellotham-pink
-$primary-invert: $hellotham-pink-invert
-$body-color: #330033
-$black: #330033
+$primary: #660099
+$primary-invert: white
+$body-color: $hellotham-purple-shadow
+// $black: #330033
+$link: $hellotham-purple
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -57,20 +59,22 @@ $black: #330033
     font-size: 18px
     font-size: 1rem
     line-height: 1.25
-    background-color: #fff
+    background-color: #ff99cc
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
     color: #660099
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px #660099
+    box-shadow: inset 0 0 0 2px #660099
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
 
+.navbar-item
+  color: $primary
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
