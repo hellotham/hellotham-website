@@ -10,6 +10,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+logo_url: /img/logo.svg
 
 collections:
   - name: "blog"

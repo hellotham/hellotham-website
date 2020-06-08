@@ -10,16 +10,22 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="footer has-background-grey has-text-black">
         <div className="content has-text-centered">
+          <p className="content has-text-grey-dark is-size-7">
+            © Copyright {new Date().getFullYear()} Hello Tham Pty. Ltd.
+            · Website design by
+            <a href="/admin"> Hello Tham</a>
+            · All rights reserved.
+          </p>
           <img
             src={logo}
             alt="Hello Tham"
-            style={{ width: '14em', height: '10em' }}
+            style={{ height: '4em' }}
           />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+        <div className="content has-text-centered has-background-grey has-text-white">
+          <div className="container has-background-grey has-text-white">
             <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-4">
                 <section className="menu">

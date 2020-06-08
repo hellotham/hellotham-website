@@ -1,5 +1,6 @@
 ---
 templateKey: contact-page
+path: /contactus
 title: Contact Us
 subtitle: via Email, Phone, LinkedIn, Facebook, Instagram, Twitter, Pinterest, Form
 image: /img/contact.jpg

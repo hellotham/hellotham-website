@@ -99,8 +99,9 @@ InfoPage.propTypes = {
 export default InfoPage
 
 export const pageQuery = graphql`
-  query InfoPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "info-page" } }) {
+  query InfoPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
       html
       frontmatter {
         title
