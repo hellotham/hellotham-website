@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import logo from '../img/logo.svg'
 
 export const IndexPageTemplate = ({
   image,
@@ -13,7 +14,7 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
-  intro,
+  intro
 }) => (
   <div>
     <div
@@ -32,29 +33,28 @@ export const IndexPageTemplate = ({
           height: '150px',
           lineHeight: '1',
           justifyContent: 'space-around',
-          alignItems: 'left',
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
+        <img src={logo} alt="Hello Tham Logo" style={{ width: '500px'}}/>
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(51, 0, 51) 0.5rem 0px 0px, rgb(51, 0, 51) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(102, 0, 153)',
+            backgroundColor: '#cc3366',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
+            width: '500px'
           }}
         >
-          {title}
+          {subheading}
         </h1>
+        {/*}
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-            'rgb(153, 0, 51) 0.5rem 0px 0px, rgb(153, 0, 51) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(204, 51, 102)',
+            backgroundColor: '#cc3366',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -62,6 +62,7 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </h3>
+        */}
       </div>
     </div>
     <section className="section section--gradient">
@@ -87,20 +88,13 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Our latest articles
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
+                    <Link className="button is-primary is-large" to="/blog">
                       Read more
                     </Link>
                   </div>
@@ -161,7 +155,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 4096, quality: 100) {
+            fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

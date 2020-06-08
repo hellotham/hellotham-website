@@ -36,10 +36,8 @@ export const InfoPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(51, 0, 51) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(102, 0, 153)',
-            color: 'white',
+            backgroundColor: '#ff99cc',
+            color: '#660099',
             lineHeight: '1',
             padding: '0.25em',
           }}
@@ -49,9 +47,7 @@ export const InfoPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(153, 0, 51) 0.5rem 0px 0px, rgb(153, 0, 51) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(204, 51, 102)',
+            backgroundColor: '#cc3366',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -113,7 +109,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 4096, quality: 100) {
+            fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

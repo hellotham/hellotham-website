@@ -51,13 +51,13 @@ export default class Index extends React.Component {
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
-                  <label>
+                  <label htmlFor="bot-field-id">
                     Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
+                    <input id="bot-field-id" name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                  <label className="label" htmlFor="name-id">
                     Your name
                   </label>
                   <div className="control">
@@ -66,7 +66,7 @@ export default class Index extends React.Component {
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
-                      id={'name'}
+                      id="name-id"
                       required={true}
                     />
                   </div>
