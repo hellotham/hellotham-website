@@ -3,8 +3,8 @@ templateKey: blog-post
 title: LEGO Visualisations – Combining my love for LEGO, Python and Tableau
 date: 2016-03-12T22:00:00.000Z
 description: Using Tableau to visualise the diversity of LEGO sets.
-featuredpost: true
-featuredimage: /img/products-grid1.jpg
+featuredpost: false
+featuredimage: /img/Set-Owners.png
 tags:
   - LEGO
   - Tableau
