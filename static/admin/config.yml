@@ -12,6 +12,14 @@ media_folder: static/img
 public_folder: /img
 logo_url: /img/logo.svg
 
+local_backend: true
+
+#local_backend:
+  # when using a custom proxy server port
+#  url: http://localhost:8081/api/v1
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+#  allowed_hosts: ['192.168.0.251']
+
 collections:
   - name: "blog"
     label: "Blog"
