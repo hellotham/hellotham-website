@@ -22,10 +22,10 @@ So I decided why not combine my love for LEGO, Python and Tableau by extracting 
 
 I wrote the following code to extract a list of sets from the database (I have masked my apiKey – to run the code, you will need to request your own apiKey from Brickset):
 
-![](http://localhost/wp-content/uploads/2019/07/image-7-819x1024.png)
+![Python code](/img/image-7.png)
 
 The visualisations have been posted to Tableau Public. You can enjoy them by clicking on this link:
 
 [Link to LEGO Visualisations on Tableau Public](https://public.tableau.com/views/LEGO/LEGOVisualisations?:embed=y&:display_count=yes&:showTabs=y)
 
-![](http://localhost/wp-content/uploads/2019/07/image-8-940x1024.png)
+![Tableau Public visualisation](/img/image-8.png)
