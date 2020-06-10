@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRoll extends React.Component {
+class PureBlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { limit, data } = this.props
+    var { edges: posts } = data.allMarkdownRemark
 
+    if (limit) {
+      posts = posts.slice(0,limit)
+    }
     return (
       <div className="columns is-multiline">
         {posts &&
@@ -31,13 +34,13 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title has-text-primary is-size-5"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="subtitle is-size-7 is-block">
                       {post.frontmatter.date}
                     </span>
                   </p>
@@ -58,7 +61,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+PureBlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -66,7 +69,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -84,7 +87,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "YYYY-MMMM-DD")
+                date(formatString: "DD MMMM YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
@@ -99,6 +102,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data) => <PureBlogRoll {...props} data={data} />}
   />
 )

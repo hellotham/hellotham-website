@@ -1,6 +1,8 @@
 # Hello Tham
 
-It is Static Web App built using [Jamstack](https://jamstack.org/) principles using the following technologies:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b370429-1a2b-4778-826e-d68530f5fe2a/deploy-status)](https://app.netlify.com/sites/hellotham-website/deploys)
+
+This is a Corporate Website Static Web App built using the following technologies:
 - [Gatsby Starter Netlify CMS](https://github.com/netlify-templates/gatsby-starter-netlify-cms)
 - [Gatsby](https://gatsbyjs.org) static site
 - [Netlify CMS](https://netlifycms.org)
@@ -10,7 +12,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 ## Features
 
 - A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
+- Editabe Pages: Home, About, Info-Collection, Blog-Collection and Contact page with Netlify Form support
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
@@ -19,13 +21,12 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Uses `gatsby-image` with Netlify-CMS preview support
 - Separate components for everything
 - Netlify deploy configuration
-- Netlify function support, see `lambda` folder
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ..and more
 
 ## Prerequisites
 
-- Node (I recommend using v8.2.0 or higher)
+- Node (I recommend using v12.18.0)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 - [Netlify CLI](https://github.com/netlify/cli)
 
@@ -44,15 +45,6 @@ Pulldown a local copy of the Github repository Netlify created for you, with the
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ yarn
-$ netlify dev # or ntl dev
-```
-
-This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
-
-To test the CMS locally, you'll need to run a production build of the site:
-
-```
-$ npm run build
 $ netlify dev # or ntl dev
 ```
 

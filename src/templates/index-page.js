@@ -92,7 +92,7 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-2">
                     Our latest articles
                   </h3>
-                  <BlogRoll />
+                  <BlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="button is-primary is-large" to="/blog">
                       Read more
