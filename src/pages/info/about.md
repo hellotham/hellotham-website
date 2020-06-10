@@ -1,8 +1,8 @@
 ---
 templateKey: 'info-page'
 path: /path/about
-title: About
-subtitle: About Us
+title: About Us
+subtitle: Company Profile, Quality, Risk 
 image: /img/about.jpg
 ---
 ## Overview
@@ -54,3 +54,10 @@ Our risk management goals and objectives include:
 * Raising the awareness of all clients, employees, suppliers and sub-contractors concerning risk management within our organisation.
 
 We apply the above goals and objectives in our consulting services in alignment with and within the framework of our client’s risk management systems, policies and procedures as well as within the overall ISO 31000 principles and guidelines.
+
+## Privacy Policy
+
+We respect and adhere to client confidentiality in the work we perform on behalf of our clients and will not disclose any information without our client's approval.
+
+Our privacy policy for the website can be viewed in a separate page on our website:
+[Privacy Policy](/info/privacy)

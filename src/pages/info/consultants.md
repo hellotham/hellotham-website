@@ -2,7 +2,7 @@
 templateKey: 'info-page'
 path: /info/consultants
 title: Our Consultants
-subtitle: Showcasing the profiles of our key consultants.
+subtitle: Showcasing Key Profiles
 image: /img/consultants.jpg
 ---
 ## Chris Tham

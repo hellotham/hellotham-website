@@ -27,13 +27,13 @@ export const InfoPageTemplate = ({
           display: 'flex',
           height: '150px',
           lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
+          justifyContent: 'center',
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="has-text-centered has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             backgroundColor: '#ff99cc',
             color: '#660099',
@@ -44,7 +44,7 @@ export const InfoPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="has-text-centered has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             backgroundColor: '#cc3366',
             color: 'white',

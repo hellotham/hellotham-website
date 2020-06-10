@@ -2,7 +2,7 @@
 templateKey: contact-page
 path: /contactus
 title: Contact Us
-subtitle: via Email, Phone, LinkedIn, Facebook, Instagram, Twitter, Pinterest, Form
+subtitle: Our presence is real and digital
 image: /img/contact.jpg
 channels:
   - name: Email
@@ -25,4 +25,4 @@ channels:
     link: https://twitter.com/HelloThamCom
 
 ---
-Our presence is real and digital. Our common id across Facebook, Twitter and Instagram is `@HelloThamCom`. In addition, you may contact us through the following​ means:
+Our common id across Facebook, Twitter and Instagram is `@HelloThamCom`. In addition, you may contact us through the following​ means:

@@ -2,7 +2,7 @@
 templateKey: 'info-page'
 path: /info/privacy
 title: Privacy Policy
-subtitle: Information collection and use, types of data collected, use, transfer and disclosure of data
+subtitle: Information collection and use
 image: /img/about.jpg
 ---
 

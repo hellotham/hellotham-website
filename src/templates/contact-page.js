@@ -54,40 +54,39 @@ export const ContactPageTemplate = ({
           backgroundAttachment: `fixed`,
         }}
       >
-        <div
+       <div
+        style={{
+          display: 'flex',
+          height: '150px',
+          lineHeight: '1',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <h1
+          className="has-text-centered has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            display: 'flex',
-            height: '150px',
+            backgroundColor: '#ff99cc',
+            color: '#660099',
             lineHeight: '1',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexDirection: 'column',
+            padding: '0.25em',
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-            style={{
-              backgroundColor: '#cc3366',
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-              width: '500px'
-            }}
-          >
-            {title}
-          </h1>
-          <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            style={{
-              backgroundColor: '#cc3366',
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >
-            {subtitle}
-          </h3>
-        </div>
+          {title}
+        </h1>
+        <h3
+          className="has-text-centered has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          style={{
+            backgroundColor: '#cc3366',
+            color: 'white',
+            lineHeight: '1',
+            padding: '0.25em',
+          }}
+        >
+          {subtitle}
+        </h3>
+      </div>
       </div>
       <section className="section">
           <div className="container">

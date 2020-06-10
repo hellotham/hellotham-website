@@ -2,7 +2,7 @@
 templateKey: 'info-page'
 path: /info/services
 title: Services
-subtitle: Business/IT Strategies, Operating Models, Strategic Roadmaps, Enterprise Architecture, Analytics, Business Process Design
+subtitle: Focus on Business and IT strategy
 image: /img/services.jpg
 
 ---

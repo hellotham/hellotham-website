@@ -37,15 +37,15 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
-        <img src={logo} alt="Hello Tham Logo" style={{ width: '500px'}}/>
+        <img src={logo} alt="Hello Tham Logo" style={{ width: '300px'}}/>
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="has-text-centered has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             backgroundColor: '#cc3366',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
-            width: '500px'
+            width: '300px'
           }}
         >
           {subheading}
