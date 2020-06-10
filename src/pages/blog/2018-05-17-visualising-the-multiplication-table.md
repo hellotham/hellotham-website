@@ -94,7 +94,7 @@ The pattern for the left digit looks deceptively simple but not as symmetrical:
 
 To see how the left digit is derived, we have observe that it acts as an “overflow” for the right digit – it increases whenever the right digit is smaller than the previous right digit. This is clearly illustrated for multiplier 2 but is true for all the other digits as well:
 
-![Relationship between Left and Right Digits](/img/multiply-14.png)
+![Relationship between Left and Right Digits](/img/multiply-15.png)
 
 In summary, we can derive the multiplication table easily with a few simple rules:
 
