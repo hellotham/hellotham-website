@@ -5,7 +5,7 @@ import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+// import vimeo from '../img/social/vimeo.svg'
 
 const Footer = class extends React.Component {
   render() {
@@ -101,6 +101,11 @@ const Footer = class extends React.Component {
                     Latest Articles
                   </Link>
                 </div>
+                <div className="menu-list">
+                  <Link className="navbar-item" to="/tags">
+                    Tags
+                  </Link>
+                </div>
                 <div className="social">
                   <a title="facebook" href="https://www.facebook.com/HelloThamCom">
                     <img
@@ -121,13 +126,6 @@ const Footer = class extends React.Component {
                     <img
                       src={instagram}
                       alt="Instagram"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="vimeo" href="https://vimeo.com">
-                    <img
-                      src={vimeo}
-                      alt="Vimeo"
                       style={{ width: '1em', height: '1em' }}
                     />
                   </a>
