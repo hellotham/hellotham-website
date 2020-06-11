@@ -86,7 +86,7 @@ The multipliers 4 and 8 create a pattern 4-8-2-6 that is reminiscent of the patt
 
 And finally the multiplier 5 stands on its own as it is symmetrical:
 
-![Multiplier 5](/img/multiply-15.png)
+![Multiplier 5](/img/multiply-12.png)
 
 The pattern for the left digit looks deceptively simple but not as symmetrical:
 
@@ -94,7 +94,7 @@ The pattern for the left digit looks deceptively simple but not as symmetrical:
 
 To see how the left digit is derived, we have observe that it acts as an “overflow” for the right digit – it increases whenever the right digit is smaller than the previous right digit. This is clearly illustrated for multiplier 2 but is true for all the other digits as well:
 
-![Relationship between Left and Right Digits](/img/multiply-15.png)
+![Relationship between Left and Right Digits](/img/multiply-14.png)
 
 In summary, we can derive the multiplication table easily with a few simple rules:
 

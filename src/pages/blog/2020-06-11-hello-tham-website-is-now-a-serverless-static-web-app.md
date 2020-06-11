@@ -6,7 +6,7 @@ description: Welcome to the new Hello Tham website! It has been completely
   rewritten as a modern web app using Javascript, React, Gatsby, Netlify CMS and
   Markdown!
 featuredpost: false
-featuredimage: /img/DSC03054.jpg
+featuredimage: /img/hellotham-serverless.jpg
 tags:
   - Hello Tham
   - website
@@ -82,4 +82,6 @@ There are some additional benefits from using the above technology stack:
 * No need for dev or staging sites, local development is easy
 * All the above without buying or installing multiple WordPress themes or plugins
 
-Finally, we are so proud of our new website we have decided to open-source it! The entire source code of the website is available on [GitHub](https://github.com/ChristineTham/hellotham-website), free free to take our website as an inspiration and build your own corporate website using our content as a starting point! Or [contact us](/contactus) if you want us to help you transition your website to the same technology stack.
+How long did it take to rewrite the new website? Surprisingly, it took less than a week from idea to deployment. One day was spent learning Gatsby and NetlifyCMS (mainly following the tutorial and watching a few videos from Gatsby). Then 2-3 days on the user interface and templates (based on the NetlifyCMS starter pack for Gatsby). The actual migration of the content took another 2 days (mainly copying and pasting from the old Wordpress site into NetlifyCMS), followed by one day to clean up and deploy to Netlify.
+
+Finally, we are so proud of our new website we have decided to open-source it! The entire source code of the website is available on [GitHub](https://github.com/ChristineTham/hellotham-website), feel free to take our website as an inspiration and build your own corporate website using our content as a starting point! Or [contact us](/contactus) if you want us to help you transition your website to a similar technology stack (we can advise you on other options).

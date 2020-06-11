@@ -52,7 +52,7 @@ I predict Microsoft will release a Linux distribution soon. No, not a desktop al
 
 ## 4. AI will not happen (yet) About Us
 
-![AI will not happen (yet) About Us](/img/Customs-House.jpeg "AI will not happen (yet) About Us")
+![AI will not happen (yet) About Us](/img/tech-2017-4.jpeg "AI will not happen (yet) About Us")
 
 30 years ago, when I was doing my honours year in computer science, Artificial Intelligence (AI) was the Next Big Thing. It seemed with rapid advances in computing technology and algorithms, we were just one step away from achieving computing consciousness, ie. a sentient machine. That hasn’t happened.
 
@@ -62,7 +62,7 @@ Same goes for Virtual Reality (VR). Still too dorky and fiddly.
 
 ## 5. The startup bubble bursts​​
 
-![The startup bubble bursts​​](/img/tech-2017-4.png "The startup bubble bursts​​")
+![The startup bubble bursts​​](/img/tech-2017-5.png "The startup bubble bursts​​")
 
 Now that the Kickstarter poster child (Pebble) has died after being acquired by FitBit, and both Fitbit and GoPro have suffered a disastrous year (with stock price plummeting to a fraction of the previous year and declining sales and profits), it’s time to ask “Has startups gone out of fashion?”
 
@@ -74,7 +74,7 @@ The other reality is the changing investment climate. Startups have benefited fr
 
 ## But … what about Apple?
 
-![But … what about Apple?](/img/tech-2017-5.png "But … what about Apple?")
+![But … what about Apple?](/img/tech-2017-6.png "But … what about Apple?")
 
 Let’s face it, the days when Apple can bet the entire company on a brand new product category that will wow the world are over. So it’s going to be more of the same, only better. Or worse, depending on your perspective.
 
