@@ -8,6 +8,7 @@ import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description, siteUrl } = useSiteMetadata()
+  const siteImage = siteUrl + `${withPrefix('/')}img/site-image.jpg`
   return (
     <div>
       <Helmet>
@@ -44,11 +45,18 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content={siteUrl} />
-        <meta
-          property="og:image"
-          content={siteUrl + `${withPrefix('/')}img/site-image.jpg`}
-        />
+        <meta name="twitter:site" content="HelloThamCom" />
+        <meta name="twitter:creator" content="HelloThamCom" />
+        <meta property="og:locale" content="en_AU" />
+        <meta property="og:site_name" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:image" content={siteImage} />
+        <meta property="og:image" content={siteImage} />
+        <meta property="og:image:secure_url" content={siteImage} />
+        <meta name="twitter:card" content={siteImage} />
       </Helmet>
       <Navbar />
       <div>{children}</div>
