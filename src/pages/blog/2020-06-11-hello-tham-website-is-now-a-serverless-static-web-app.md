@@ -20,7 +20,9 @@ tags:
   - GraphQL
   - JavaScript
 ---
-Ever since our company was established (in 2016), our web site has been built using the industry leading content management system [WordPress](https://wordpress.org), currently used in over 60 million websites around the world (according to [Wikipedia](https://en.wikipedia.org/wiki/WordPress)).
+Ever since our company was established (in 2016), our web site has been built using the industry leading content management system
+[WordPress](https://wordpress.org), currently used in over 60 million websites around the world
+(according to [Wikipedia](https://en.wikipedia.org/wiki/WordPress)).
 
 Why did we choose to change and rewrite our site completely? Is there something wrong with WordPress?
 
@@ -57,7 +59,9 @@ Our new website is fast. How fast? Our LightHouse score is 96:
 
 ![Hello Tham Lighthouse report](/img/hellotham-lighthouse.png)
 
-The Hello Tham website is now a web app written using the following technologies:
+The Hello Tham website is now a web app written (based on the
+[gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms) starter)
+using the following technologies:
 
 * JavaScript, HTML and CSS - the building blocks of the [World Wide Web](https://www.w3.org/)
 * [Markdown](https://daringfireball.net/projects/markdown/) - a simple, easy to learn and lightweight text markup language for creating web content
@@ -84,4 +88,4 @@ There are some additional benefits from using the above technology stack:
 
 How long did it take to rewrite the new website? Surprisingly, it took less than a week from idea to deployment. One day was spent learning Gatsby and NetlifyCMS (mainly following the tutorial and watching a few videos from Gatsby). Then 2-3 days on the user interface and templates (based on the NetlifyCMS starter pack for Gatsby). The actual migration of the content took another 2 days (mainly copying and pasting from the old Wordpress site into NetlifyCMS), followed by one day to clean up and deploy to Netlify.
 
-Finally, we are so proud of our new website we have decided to open-source it! The entire source code of the website is available on [GitHub](https://github.com/ChristineTham/hellotham-website), feel free to take our website as an inspiration and build your own corporate website using our content as a starting point! Or [contact us](/contactus) if you want us to help you transition your website to a similar technology stack (we can advise you on other options).
+Finally, we are so proud of our new website we have decided to open-source it! The entire source code of the website is available on [GitHub](https://github.com/hellotham/hellotham-website), feel free to take our website as an inspiration and build your own corporate website using our content as a starting point! Or [contact us](/contactus) if you want us to help you transition your website to a similar technology stack (we can advise you on other options).
