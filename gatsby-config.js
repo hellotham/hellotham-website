@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Hello Tham',
+    siteUrl: 'https://hellotham.com',
     description:
       'Hello Tham is a boutique management consulting firm. We deliver consulting services to clients around the world. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design. We also assist our clients in implementing our recommendations, models and strategies.',
   },
+  pathPrefix: "/reponame",
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
