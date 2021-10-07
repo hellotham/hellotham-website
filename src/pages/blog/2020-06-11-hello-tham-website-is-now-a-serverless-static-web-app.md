@@ -6,7 +6,7 @@ description: Welcome to the new Hello Tham website! It has been completely
   rewritten as a modern web app using Javascript, React, Gatsby, Netlify CMS and
   Markdown!
 featuredpost: false
-featuredimage: /img/hellotham-serverless.jpg
+featuredimage: ../../img/hellotham-serverless.jpg
 tags:
   - Hello Tham
   - website
@@ -34,7 +34,7 @@ Our new web site is rewritten from the ground up as a modern, serverless, web ap
 
 What does this mean exactly? Traditional web sites require a backend server and is relatively difficult to deploy and scale to achieve the near 100% availability that anyone would expect of any website today. Even on the cloud, deploying a scalable, performant, highly available website can be challenging. As an example, the following diagram illustrates AWS recommendations for deploying and hosting a WordPress website:
 
-![AWS Reference Architecture for WordPress hosting](/img/aws-refarch-wordpress-v20171026.jpeg)
+![AWS Reference Architecture for WordPress hosting](../../img/aws-refarch-wordpress-v20171026.jpeg)
 
 Many companies and web agencies choose to use a managed WordPress hosting provider that takes care of the complex deployment architecture for you, and ensure your site remains up, secure, fast and updated.
 
@@ -57,7 +57,7 @@ The benefits are immediate and fairly obvious:
 
 Our new website is fast. How fast? Our LightHouse score is 96:
 
-![Hello Tham Lighthouse report](/img/hellotham-lighthouse.png)
+![Hello Tham Lighthouse report](../../img/hellotham-lighthouse.png)
 
 The Hello Tham website is now a web app written (based on the
 [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms) starter)
@@ -80,7 +80,7 @@ There are some additional benefits from using the above technology stack:
 * New content can be created without writing code or even Markdown using the NetlifyCMS editor interface
 * Images are lazy loaded and dynamically optimised for the viewing device and screen size, automatically using Gatsby image processing
 
-![NetlifyCMS editor interface](/img/hellotham-edit.png)
+![NetlifyCMS editor interface](../../img/hellotham-edit.png)
 
 * The build and deployment process is completely automated and seamless, any push to the GitHub master branch automatically triggers an update to the website
 * No need for dev or staging sites, local development is easy

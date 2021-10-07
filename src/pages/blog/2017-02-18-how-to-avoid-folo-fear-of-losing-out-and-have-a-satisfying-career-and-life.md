@@ -4,7 +4,7 @@ title: How to Avoid FOLO (Fear of Losing Out) and have a satisfying career and l
 date: 2017-02-17T22:00:00.000Z
 description: Advice on how to have a satisfying career and life
 featuredpost: false
-featuredimage: /img/folo.jpg
+featuredimage: ../../img/folo.jpg
 tags:
   - advice
   - career

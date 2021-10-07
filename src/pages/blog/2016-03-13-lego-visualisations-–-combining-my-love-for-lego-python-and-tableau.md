@@ -4,7 +4,7 @@ title: LEGO Visualisations – Combining my love for LEGO, Python and Tableau
 date: 2016-03-12T22:00:00.000Z
 description: Using Tableau to visualise the diversity of LEGO sets.
 featuredpost: false
-featuredimage: /img/Set-Owners.png
+featuredimage: ../../img/Set-Owners.png
 tags:
   - LEGO
   - Tableau
@@ -22,10 +22,10 @@ So I decided why not combine my love for LEGO, Python and Tableau by extracting 
 
 I wrote the following code to extract a list of sets from the database (I have masked my apiKey – to run the code, you will need to request your own apiKey from Brickset):
 
-![Python code](/img/lego1.png)
+![Python code](../../img/lego1.png)
 
 The visualisations have been posted to Tableau Public. You can enjoy them by clicking on this link:
 
 [Link to LEGO Visualisations on Tableau Public](https://public.tableau.com/views/LEGO/LEGOVisualisations?:embed=y&:display_count=yes&:showTabs=y)
 
-![Tableau Public visualisation](/img/lego2.png)
+![Tableau Public visualisation](../../img/lego2.png)

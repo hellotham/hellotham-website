@@ -5,7 +5,7 @@ date: 2018-10-31T22:00:00.000Z
 description: Part 1 of a series of articles about me learning how to code and
   delivering two prototypes.
 featuredpost: false
-featuredimage: /img/zero-1.png
+featuredimage: ../../img/zero-1.png
 tags:
   - Proof of Concept
   - technology

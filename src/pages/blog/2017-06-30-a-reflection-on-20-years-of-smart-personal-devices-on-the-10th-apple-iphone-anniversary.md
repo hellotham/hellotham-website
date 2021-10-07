@@ -5,7 +5,7 @@ title: A reflection on 20 years of smart personal devices, on the 10th Apple
 date: 2017-06-29T23:00:00.000Z
 description: A personal history of the use of smartphones over 20 years.
 featuredpost: false
-featuredimage: /img/tech-2017-6.png
+featuredimage: ../../img/tech-2017-6.png
 tags:
   - phone
   - history

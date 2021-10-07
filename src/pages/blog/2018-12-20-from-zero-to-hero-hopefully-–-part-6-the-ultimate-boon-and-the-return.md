@@ -5,7 +5,7 @@ date: 2018-12-19T22:00:00.000Z
 description: This is the sixth part (and probably the last, for now) of my
   series of articles on learning to code at age 55 and creating some prototypes.
 featuredpost: false
-featuredimage: /img/zero-6.png
+featuredimage: ../../img/zero-6.png
 tags:
   - Proof of Concept
   - technology
@@ -26,7 +26,7 @@ Well, in the last week and the last Sprint, all that is left is to complete the 
 
 I started this series of articles by referencing the archetypical Hero’s Journey by Joseph Campbell (*The Hero With a Thousand Faces*), so it seems appropriate to structure this article along the concluding stages of the journey – please note this diagram mis-spells apotheosis as “apostasis” which is a completely different word with an entirely different (and not altogether pleasant) meaning:
 
-![The 17 stages of the Monomyth](/img/zero-6a.png "The 17 stages of the Monomyth")
+![The 17 stages of the Monomyth](../../img/zero-6a.png "The 17 stages of the Monomyth")
 
 ## The Ultimate Boon
 

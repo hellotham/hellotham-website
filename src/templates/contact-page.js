@@ -4,6 +4,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { navigate } from 'gatsby-link'
+import { getSrc } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
@@ -48,7 +49,7 @@ export const ContactPageTemplate = ({
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            !!image.childImageSharp ? getSrc(image) : image
           })`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
@@ -219,9 +220,7 @@ export const pageQuery = graphql`
         subtitle
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 2048)
           }
         }
         channels {

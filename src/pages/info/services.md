@@ -3,7 +3,7 @@ templateKey: 'info-page'
 path: /info/services
 title: Services
 subtitle: Focus on Business and IT strategy
-image: /img/services.jpg
+image: ../../img/services.jpg
 
 ---
 

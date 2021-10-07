@@ -4,7 +4,7 @@ title: Refresh of Hello Tham website
 date: 2019-07-21T22:00:00.000Z
 description: Welcome to the new website!
 featuredpost: false
-featuredimage: /img/refresh.jpg
+featuredimage: ../../img/refresh.jpg
 tags:
   - Hello Tham
   - website

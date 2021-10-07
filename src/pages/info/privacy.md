@@ -3,7 +3,7 @@ templateKey: 'info-page'
 path: /info/privacy
 title: Privacy Policy
 subtitle: Information collection and use
-image: /img/about.jpg
+image: ../../img/about.jpg
 ---
 
 Hello Tham Pty. Ltd. (“us”, “we”, or “our”) operates the [https://www.hellotham.com](https://www.hellotham.com/) website (hereinafter referred to as the “Service”).

@@ -3,7 +3,7 @@ templateKey: 'info-page'
 path: /path/about
 title: About Us
 subtitle: Company Profile, Quality, Risk 
-image: /img/about.jpg
+image: ../../img/about.jpg
 ---
 ## Overview
 
@@ -22,7 +22,7 @@ We also assist our clients in implementing our recommendations, models and strat
 
 ## ​About our logo​​​​​
 
-![Logo](/img/hellotham-logo-250x250.png)
+![Logo](../../img/hellotham-logo-250x250.png)
 
 Our logo reflects who we are and our values.
 

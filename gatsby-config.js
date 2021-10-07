@@ -8,6 +8,7 @@ module.exports = {
   pathPrefix: "/reponame",
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-image`,
     'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -40,6 +41,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
+              // staticFolderName: 'uploads',
               name: 'uploads',
             },
           },

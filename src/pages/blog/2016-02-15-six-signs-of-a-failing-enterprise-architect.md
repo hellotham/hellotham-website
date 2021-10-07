@@ -4,7 +4,7 @@ title: Six Signs of a Failing Enterprise Architect
 date: 2016-02-14T22:00:00.000Z
 description: Six Signs of a Failing Enterprise Architect
 featuredpost: false
-featuredimage: /img/sixsigns.jpg
+featuredimage: ../../img/sixsigns.jpg
 tags:
   - EnterpriseArchitecture
 ---

@@ -4,7 +4,7 @@ title: Why I consider myself to be Retired, and why you should too
 date: 2019-01-19T22:00:00.000Z
 description: There is no shame in retiring early, and potentially many benefits.
 featuredpost: false
-featuredimage: /img/retired.jpg
+featuredimage: ../../img/retired.jpg
 tags:
   - advice
   - opinion

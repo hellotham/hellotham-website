@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { getImage } from "gatsby-plugin-image"
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class PureBlogRoll extends React.Component {
@@ -26,7 +27,7 @@ class PureBlogRoll extends React.Component {
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: post.frontmatter.featuredimage,
+                          image: getImage(post.frontmatter.featuredimage),
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         }}
                       />
@@ -69,7 +70,7 @@ PureBlogRoll.propTypes = {
   }),
 }
 
-export default (props) => (
+const BlogRoll = (props) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -91,9 +92,7 @@ export default (props) => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(width: 120)
                   }
                 }
               }
@@ -105,3 +104,4 @@ export default (props) => (
     render={(data) => <PureBlogRoll {...props} data={data} />}
   />
 )
+export default BlogRoll

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import FetchImage from './FetchImage'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
@@ -20,7 +20,7 @@ const FeatureGrid = ({ gridItems }) => (
                 display: 'inline-block',
               }}
             >
-              <PreviewCompatibleImage imageInfo={item} />
+              <FetchImage filename={item.image.relativePath} />
             </div>
           </div>
           <p>{item.text}</p>

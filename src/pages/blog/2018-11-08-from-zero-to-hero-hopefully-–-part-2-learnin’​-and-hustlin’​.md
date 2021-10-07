@@ -5,7 +5,7 @@ date: 2018-11-07T22:00:00.000Z
 description: This is the second part of my series of articles on learning to
   code at age 55 and creating some prototypes.
 featuredpost: false
-featuredimage: /img/zero-2.png
+featuredimage: ../../img/zero-2.png
 tags:
   - Proof of Concept
   - technology
@@ -20,7 +20,7 @@ In my first article, I referenced The Hero’s Journey. Joseph Campbell, a mytho
 
 For more information, refer to the Wikipedia article [The Hero’s Journey](https://en.wikipedia.org/wiki/Hero%27s_journey). In the context of my own adventure, I have now crossed the threshold from the ordinary world into the special world and will be encountering **Tests**, **Allies** and **Enemies**:
 
-![Hero's Journey](/img/zero-2a.png)
+![Hero's Journey](../../img/zero-2a.png)
 
 ## Tests (my learning progress)
 

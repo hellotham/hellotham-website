@@ -3,7 +3,7 @@ templateKey: 'info-page'
 path: /info/work
 title: Recent Work
 subtitle: Recent deliverables to our clients
-image: /img/work.jpg
+image: ../../img/work.jpg
 ---
 Here are some recent examples (from the last few years) of work we have performed for clients. Please do not hesitate to [contact us](https://www.hellotham.com/contactus/) at [info@hellotham.com](mailto:info@hellotham.com) if you need more information or to discuss your specific needs.
 

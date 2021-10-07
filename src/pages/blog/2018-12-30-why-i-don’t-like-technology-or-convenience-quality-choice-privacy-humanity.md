@@ -5,7 +5,7 @@ title: Why I don’t like Technology, or, (convenience) = -(quality) -(choice)
 date: 2018-12-29T22:00:00.000Z
 description: Technology isn't always positive, or a benefit.
 featuredpost: false
-featuredimage: /img/hate-tech.png
+featuredimage: ../../img/hate-tech.png
 tags:
   - opinion
   - technology

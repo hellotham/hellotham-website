@@ -5,7 +5,7 @@ date: 2018-11-20T22:00:00.000Z
 description: "This is the third part of my series of articles on learning to
   code at age 55 and creating some prototypes. "
 featuredpost: false
-featuredimage: /img/zero-3.png
+featuredimage: ../../img/zero-3.png
 tags:
   - Proof of Concept
   - technology

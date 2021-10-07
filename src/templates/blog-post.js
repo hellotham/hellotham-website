@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -36,7 +36,7 @@ export const BlogPostTemplate = ({
               <div className="column is-6">
                 {featuredimage ? (
                   <figure className="image">
-                    <Img fluid={featuredimage.childImageSharp.fluid} alt={`Featured image for post ${title}`} />
+                    <GatsbyImage image={getImage(featuredimage)} alt={`Featured image for post ${title}`} />
                   </figure>
                 ) : null}
               </div>
@@ -110,15 +110,13 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY")
         title
         description
         tags
         featuredimage  {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 2048)
           }
         }
       }
