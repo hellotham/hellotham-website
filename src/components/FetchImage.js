@@ -14,7 +14,7 @@ const FetchImage = props => (
                 relativePath
               }
             }
-            gatsbyImageData
+            gatsbyImageData(width: 240)
           }
         }
       }

@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
-        <img src={logo} alt="Hello Tham Logo" style={{ width: '300px'}}/>
+        <img src={logo} alt="Hello Tham Logo" width="300" />
         <h1
           className="has-text-centered has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
@@ -96,7 +96,7 @@ export const IndexPageTemplate = ({
                   <BlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="button is-primary is-large" to="/blog">
-                      Read more
+                      View Blog
                     </Link>
                   </div>
                 </div>

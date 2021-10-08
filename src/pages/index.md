@@ -29,7 +29,7 @@ intro:
       text: >
         Find out more about our key consultants
       link: /info/consultants
-    - title: More Information
+    - title: Company Information
       image: ../img/about.jpg
       text: >
         View company information, including risk, quality and privacy statements

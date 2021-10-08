@@ -3,6 +3,15 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
+const navbarItems = [
+  { label: 'About', link: '/info/about'},
+  { label: 'Contact Us', link: '/contactus'},
+  { label: 'Services', link: '/info/services'},
+  { label: 'Consultants', link: '/info/consultants'},
+  { label: 'Partners', link: '/info/partners'},
+  { label: 'Recent Work', link: '/info/work'},
+  { label: 'Blog', link: '/blog'}
+]
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -42,7 +51,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Hello Tham" style={{ width: '200px' }} />
+              <img src={logo} alt="Hello Tham" width="200" />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -56,6 +65,7 @@ const Navbar = class extends React.Component {
               <span />
               <span />
               <span />
+              <span className="is-sr-only">Menu</span>
             </div>
           </div>
           <div
@@ -63,30 +73,11 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/info/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/contactus">
-                Contact Us
-              </Link>
-              <Link className="navbar-item" to="/info/services">
-                Services
-              </Link>
-              <Link className="navbar-item" to="/info/work">
-                Recent Work
-              </Link>
-              <Link className="navbar-item" to="/info/consultants">
-                Consultants
-              </Link>
-              <Link className="navbar-item" to="/info/partners">
-                Partners
-              </Link>
-              <Link className="navbar-item" to="/info/privacy">
-                Privacy Policy
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
+              {navbarItems.map(item => 
+                <Link className="navbar-item" to={item.link}>
+                  {item.label}
+                </Link>
+              )}
             </div>
             <div className="navbar-end has-text-centered">
               <a
