@@ -1,7 +1,7 @@
 {
   "name": "hellotham-website",
   "description": "Hello Tham website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Chris Tham",
   "dependencies": {
     "bulma": "^0.9.3",

@@ -13,7 +13,7 @@ const Footer = class extends React.Component {
       <footer className="footer has-background-primary-light has-text-black">
         <div className="content has-text-centered">
           <img src={logo} alt="Hello Tham" width="200" />
-          <p className="content has-text-grey-dark is-size-7">
+          <p className="content has-text-black is-size-7">
             © Copyright {new Date().getFullYear()} Hello Tham Pty. Ltd. ·
             Website design by
             <a href="/admin"> Hello Tham</a>· All rights reserved.
