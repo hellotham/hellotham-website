@@ -4,5 +4,7 @@
   functions = "lambda"
 [build.environment]
   NODE_VERSION = "14"
-  YARN_VERSION = "1.22.11"
+  YARN_VERSION = "1.22.15"
   YARN_FLAGS = "--no-ignore-optional"
+[[plugins]]
+package = "@netlify/plugin-gatsby"
