@@ -1,81 +1,240 @@
 module.exports = {
   siteMetadata: {
     title: 'Hello Tham',
-    siteUrl: 'https://hellotham.com',
+    author: {
+      name: 'Chris Tham',
+      url: 'https://christham.net',
+      summary: 'Founder of Hello Tham',
+    },
     description:
-      'Hello Tham is a boutique management consulting firm. We deliver consulting services to clients around the world. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design. We also assist our clients in implementing our recommendations, models and strategies.',
+      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.',
+    siteUrl: 'https://hellotham2.gatsbyjs.io',
+    location: 'Sydney, NSW, Australia',
+    social: {
+      email: 'mailto:info@hellotham.com',
+      phone: 'tel:+61413008577',
+      facebook: 'https://www.facebook.com/HelloThamCom',
+      instagram: 'https://www.instagram.com/HelloThamCom/',
+      twitter: 'https://twitter.com/HelloThamCom',
+      linkedin: 'https://www.linkedin.com/company/17950469',
+      github: 'https://github.com/hellotham',
+    },
   },
-  pathPrefix: "/reponame",
   plugins: [
+    'gatsby-plugin-svgr-svgo',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-image`,
-    'gatsby-plugin-sass',
-    {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
-    },
+    'gatsby-plugin-mdx-source-name',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
         name: 'images',
+        path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              // staticFolderName: 'uploads',
-              name: 'uploads',
-            },
-          },
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/pages/`,
+        ignore: ['__generated__/*'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        // defaultLayouts: {
+        //   posts: require.resolve("./src/templates/mdx-template.tsx"),
+        //   default: require.resolve("./src/templates/mdx-template.tsx"),
+        // },
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 2048,
+              linkImagesToOriginal: false,
             },
           },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-smartypants' },
+        ],
+        remarkPlugins: [{ resolve: 'remark-slug' }, { resolve: '@mapbox/rehype-prism' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Hello Tham',
+        short_name: 'HelloTham',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#660099',
+        display: 'minimal-ui',
+        icon: 'src/images/logo.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(
+            filter: {
+              path: {regex: "/^(?!/404/|/404.html|/dev-404-page/)/"}
+              componentChunkName: {regex: "/^component---src-.*tsx$/"}
+            }) {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: 'weekly',
+            priority: 0.7,
+          }
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-feed-mdx',
+      options: {
+        query: `
           {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
+            site {
+              siteMetadata {
+                title
+                description
+                author {
+                  name
+                }
+                siteUrl
+                site_url: siteUrl
+              }
+              buildTime
+            }
+            allFile(filter: {relativePath: {eq: "hellotham_logo.png"}}) {
+              nodes {
+                childImageSharp {
+                  resize(width: 1200) {
+                    src
+                  }
+                }
+              }
+            }
+          }
+        `,
+        setup(options) {
+          return Object.assign({}, options.query, {
+            title: options.query.site.siteMetadata.title,
+            feed_url: options.query.site.siteMetadata.siteUrl + '/rss.xml',
+            image_url:
+              options.query.site.siteMetadata.siteUrl + options.query.allFile.nodes[0].childImageSharp.resize.src,
+            author: options.query.site.siteMetadata.author.name,
+            managingEditor: options.query.site.siteMetadata.author.name,
+            webMaster: options.query.site.siteMetadata.author.name,
+            copyright: options.query.site.buildTime.slice(0, 4) + ' ' + options.query.site.siteMetadata.title,
+            language: 'en',
+            pubDate: options.query.site.buildTime,
+          })
+        },
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  author: edge.node.frontmatter.author,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + '/posts/' + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + '/posts/' + edge.node.slug,
+                  enclosure: {
+                    url: site.siteMetadata.siteUrl + edge.node.frontmatter.image.childImageSharp.resize.src,
+                  },
+                  categories: edge.node.frontmatter.tags,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })
+              })
             },
+            query: `
+              {
+                allMdx(
+                  filter: { fields: { source: { eq: "posts" } } }
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        title
+                        description
+                        author
+                        date
+                        image {
+                          childImageSharp {
+                            resize(width: 1200) {
+                              src
+                            }
+                          }
+                        }
+                        tags
+                      }
+                      html
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            // match: '^/posts/',
           },
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // "gatsby-plugin-offline",
+    'gatsby-plugin-gatsby-cloud',
   ],
 }
