@@ -18,11 +18,11 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO
-        type="pages"
+        type="page"
         title="Blog Posts"
         description="Articles published from time to time"
         image={ogimage}
-        pathname="/posts"
+        pathname="/blog"
       />
       <main className="mt-10">
         <article className="post">
