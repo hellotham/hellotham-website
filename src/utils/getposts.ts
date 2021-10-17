@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { ImageDataLike } from 'gatsby-plugin-image'
+import { ImgType } from '@/components/img'
 
 const postQuery = graphql`
   query {
@@ -14,6 +14,8 @@ const postQuery = graphql`
             childImageSharp {
               gatsbyImageData
             }
+            extension
+            publicURL
           }
           tags
         }
@@ -29,7 +31,7 @@ export type PostType = {
     description: string
     author: string
     date: string
-    image: ImageDataLike
+    image: ImgType
     tags: string[]
   }
   slug: string

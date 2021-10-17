@@ -21,7 +21,14 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-svgr-svgo',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
