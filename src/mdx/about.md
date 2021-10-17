@@ -1,4 +1,5 @@
 ---
+published: true
 title: About Us
 description: Company Profile, Quality, Risk
 image: ../images/home.jpg

@@ -1,4 +1,5 @@
 ---
+published: true
 title: Our Partners
 description: AWS, DOMO, Gatsby, Microsoft
 image: ../images/partners.jpg

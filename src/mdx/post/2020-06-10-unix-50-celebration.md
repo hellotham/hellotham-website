@@ -1,4 +1,5 @@
 ---
+published: true
 title: A celebration of 50 Years of Unix
 description: A beautiful operating system, still healthy after 50 years.
 author: Chris Tham
