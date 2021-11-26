@@ -5,7 +5,7 @@ description: Our new series of articles on financial analysis and portfolio opti
 author: Chris Tham
 date: 2021-10-19T00:00:00.000Z
 featuredpost: false
-image: ../../images/site-image.jpg
+image: ../../images/20141020-DSC07931-Edit.jpg
 tags:
   - Finance
   - Portfolio Optimisation
