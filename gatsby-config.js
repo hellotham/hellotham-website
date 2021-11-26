@@ -128,7 +128,7 @@ module.exports = {
               }
               buildTime
             }
-            allFile(filter: {relativePath: {eq: "hellotham_logo.png"}}) {
+            allFile(filter: {relativePath: {eq: "hellotham.png"}}) {
               nodes {
                 childImageSharp {
                   resize(width: 1200) {
