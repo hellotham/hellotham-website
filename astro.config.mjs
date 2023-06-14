@@ -21,7 +21,7 @@ export default defineConfig({
       noExternal: ['swiper', 'leaflet']
     }
   },
-  site: 'https://hellotham.github.io',
+  site: 'https://hellotham.netlify.app',
   integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
   experimental: {
     assets: true
