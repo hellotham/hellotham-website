@@ -1,30 +1,30 @@
 {
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "public", ".cache"],
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["dom", "es2017"],
-    // "allowJs": true,
-    // "checkJs": true,
-    "jsx": "react",
     "strict": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "noEmit": true,
-    "skipLibCheck": true,
+    // Enable top-level await, and other modern ESM features.
+    "target": "ESNext",
+    "module": "ESNext",
+    // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    // Enable JSON imports.
+    "resolveJsonModule": true,
+    // Astro directly run TypeScript code, no transpilation needed.
+    "noEmit": true,
+    // Report an error when importing a file using a casing different from the casing on disk.
+    "forceConsistentCasingInFileNames": true,
+    // Properly support importing CJS modules in ESM
+    "esModuleInterop": true,
+    // Skip typechecking libraries and .d.ts files
+    "skipLibCheck": true,
+    // Add alias for assets folder for easy reference to assets
+    // "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "photoswipe/lightbox": [
+        "./node_modules/photoswipe/dist/types/lightbox/lightbox.d.ts"
+      ]
     },
-    "plugins": [
-      {
-        "name": "ts-graphql-plugin",
-        "schema": "schema.graphql" /* Path to your GraphQL schema */,
-        "tag": "gql" /* Template tag function name */
-      }
-    ]
+    // Allow JavaScript files to be imported
+    "allowJs": true
   }
 }
