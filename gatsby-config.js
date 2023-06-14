@@ -21,7 +21,14 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-svgr-svgo',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
@@ -121,7 +128,7 @@ module.exports = {
               }
               buildTime
             }
-            allFile(filter: {relativePath: {eq: "hellotham_logo.png"}}) {
+            allFile(filter: {relativePath: {eq: "hellotham.png"}}) {
               nodes {
                 childImageSharp {
                   resize(width: 1200) {

@@ -11,30 +11,48 @@ export default function Footer() {
   return (
     <footer className="text-gray-600">
       <div className="container fixed bottom-0 inset-x-0 bg-pink-100 px-4 py-4 mx-auto flex items-center md:flex-row flex-col">
-        <Link className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900" to="/">
+        <Link
+          className="flex title-font font-medium items-center lg:justify-start justify-center text-purple-600"
+          to="/"
+        >
           <img src={HelloTham} alt="Footer Logo" width="150" />
           <span className="sr-only">Hello Tham</span>
         </Link>
         <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-pink-300 md:py-2 md:mt-0 mt-4">
           © {new Date().getFullYear()} Hello Tham Pty Ltd
-          <Link to="/contactus" className="text-purple-600 ml-1" rel="noopener noreferrer" target="_blank">
+          <Link
+            to="/contactus"
+            className="text-purple-600 hover:text-pink-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             (Contact Us)
           </Link>
         </p>
         <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-pink-300 md:py-2 md:mt-0 mt-4">
-          <Link to="/privacy" className="text-purple-600 ml-1" rel="noopener noreferrer" target="_blank">
+          <Link
+            to="/privacy"
+            className="text-purple-600 hover:text-pink-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Privacy Policy
           </Link>
         </p>
         <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-pink-300 md:py-2 md:mt-0 mt-4">
-          <a href="/rss.xml" className="text-purple-600 ml-1" rel="noopener noreferrer" target="_blank">
+          <a
+            href="/rss.xml"
+            className="text-purple-600 hover:text-pink-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             RSS
           </a>
         </p>
         <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-pink-300 md:py-2 md:mt-0 mt-4">
           <a
             href="/sitemap/sitemap-index.xml"
-            className="text-purple-600 ml-1"
+            className="text-purple-600 hover:text-pink-600 ml-1"
             rel="noopener noreferrer"
             target="_blank"
           >

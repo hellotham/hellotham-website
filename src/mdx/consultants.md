@@ -1,4 +1,5 @@
 ---
+published: true
 title: Our Consultants
 description: Showcasing Key Profiles
 image: ../images/consultants.jpg

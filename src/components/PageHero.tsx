@@ -9,13 +9,8 @@ interface PageHeroProps {
 import defaultImage from '@/svg/undraw/undraw_design_components_9vy6-2.svg'
 
 const PageHero = ({ title, description, image }: PageHeroProps) => (
-  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative" style={{ height: '24em' }}>
-    <div
-      className="absolute left-0 bottom-0 w-full h-full z-10"
-      style={{
-        backgroundImage: 'linear-gradient(180deg,transparent,rgba(0,0,0,.7))',
-      }}
-    ></div>
+  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative h-96">
+    <div className="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-t from-gray-700"></div>
     <img
       src={image ? image : defaultImage}
       alt="featured image"

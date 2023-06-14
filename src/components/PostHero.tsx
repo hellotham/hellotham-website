@@ -1,31 +1,27 @@
 import * as React from 'react'
-import { StaticImage, GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import Tags from '@/components/tags'
 import ShareButtons from '@/components/sharebuttons'
+import Img, { ImgType } from '@/components/img'
 
 interface PostHeroProps {
   url: string
   title: string
-  description?: string
-  author?: string
-  date?: string
-  image?: IGatsbyImageData
-  tags?: string[]
+  description: string
+  author: string
+  date: string
+  image: ImgType
+  tags: string[]
 }
 
 const PostHero = ({ url, title, description, author, date, image, tags }: PostHeroProps) => (
-  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative" style={{ height: '24em' }}>
-    <div
-      className="absolute left-0 bottom-0 w-full h-full z-10"
-      style={{
-        backgroundImage: 'linear-gradient(180deg,transparent,rgba(0,0,0,.7))',
-      }}
-    ></div>
-    <GatsbyImage
-      image={image!}
+  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative h-96">
+    <div className="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-t from-gray-700"></div>
+    <Img
+      image={image}
       alt="featured image"
-      loading="eager"
-      className="absolute left-0 top-0 w-full h-full z-0 object-cover"
+      className="absolute left-0 w-full h-full top-0 z-0"
+      imgClassName="object-cover"
     />
     <div className="p-4 absolute bottom-0 left-0 z-20">
       {tags ? <Tags tags={tags} /> : ''}
