@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content'
+import type { Frontmatter } from '../config'
+import { SiteMetadata } from '../config'
+import Base from '../layouts/base.astro'
+import Hero from '../components/hero.astro'
+import Features from '../components/features.astro'
+import FindOutMore from '../components/findoutmore.astro'
+import LatestArticles from '../components/latestarticles.astro'
+import coverImage from '../assets/svg/undraw/undraw_ideas_flow.svg'
+import socialImage from '../assets/undraw/undraw_ideas_flow.png'
+
+const frontmatter: Frontmatter = {
+  title: SiteMetadata.title,
+  description: SiteMetadata.description,
+  coverImage: coverImage,
+  socialImage: socialImage,
+  publishDate: SiteMetadata.buildTime
+}
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true
+})
+const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
+---
+
+<Base frontmatter={frontmatter}>
+  <Hero />
+  <Features />
+  <FindOutMore />
+  <LatestArticles posts={latestPosts} />
+  <div class="bg-white p-24 dark:bg-black md:p-12"></div>
+</Base>

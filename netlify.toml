@@ -1,10 +1,13 @@
+[dev]
+  targetPort = 3000
+  command = "pnpm run dev"
+
 [build]
-  publish = "public"
-  command = "npm run build"
-  functions = "lambda"
+  command = "pnpm run build"
+  publish = "dist"
+
 [build.environment]
-  NODE_VERSION = "14"
-  YARN_VERSION = "1.22.15"
-  YARN_FLAGS = "--no-ignore-optional"
+  NODE_VERSION = "18"
+
 [[plugins]]
-package = "@netlify/plugin-gatsby"
+  package = "@netlify/plugin-emails"
