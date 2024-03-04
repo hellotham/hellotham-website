@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 import Base from '../layouts/base.astro'
 import PageHero from '../components/pagehero.astro'
 import { SiteMetadata } from '../config'
@@ -44,8 +44,7 @@ const social = await getCollection('social')
                       <div class="flex items-start">
                         <div class="shrink-0">
                           <Icon
-                            pack="bi"
-                            name={method.data.icon}
+                            name={'bi:' + method.data.icon}
                             class="flex h-12 w-12 items-center justify-center rounded-md bg-purple-600 p-2 text-white shadow-md"
                           />
                         </div>

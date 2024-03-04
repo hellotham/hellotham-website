@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import icon from 'astro-icon';
 import unocss from 'unocss/astro';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
@@ -22,12 +23,9 @@ export default defineConfig({
     }
   },
   site: 'https://hellotham.com',
-  integrations: [unocss({
+  integrations: [icon(),unocss({
     injectReset: true
   }), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
-  experimental: {
-    assets: true
-  },
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkEmoji],

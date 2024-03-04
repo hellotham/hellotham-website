@@ -1,5 +1,5 @@
 [dev]
-  targetPort = 3000
+  targetPort = 4321
   command = "pnpm run dev"
 
 [build]
@@ -7,7 +7,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 [[plugins]]
   package = "@netlify/plugin-emails"
