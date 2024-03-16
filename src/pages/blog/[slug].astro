@@ -16,14 +16,14 @@ export async function getStaticPaths() {
       params: { slug: entry.slug },
       props: {
         entry,
-        prev: i > 0 && posts[i - 1],
-        next: i < posts.length - 1 && posts[i + 1]
+        prev: i > 0 ? posts[i - 1] : undefined,
+        next: i < posts.length - 1 ? posts[i + 1] : undefined
       }
     }))
   )
 }
 
-type Props = {
+export interface Props {
   entry: CollectionEntry<'blog'>
   prev: CollectionEntry<'blog'>
   next: CollectionEntry<'blog'>

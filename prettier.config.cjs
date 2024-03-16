@@ -7,7 +7,6 @@ module.exports = {
   trailingComma: "none",
   semi: false,
   printWidth: 100,
-  pluginSearchDirs: [__dirname],
   plugins: [require.resolve('prettier-plugin-astro')],
   overrides: [
     {

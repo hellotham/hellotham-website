@@ -1,5 +1,6 @@
 ---
-import { SEO, TwitterCardType } from 'astro-seo'
+import type { TwitterCardType } from 'astro-seo'
+import { SEO } from 'astro-seo'
 import { getImage } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import type { Frontmatter } from '../config'
@@ -194,8 +195,8 @@ const article: WithContext<Article> = {
   {openGraph}
   {twitter}
 />
-<script is:inline set:html={JSON.stringify(website)} type="application/ld+json" />
-<script is:inline set:html={JSON.stringify(organization)} type="application/ld+json" />
-<script is:inline set:html={JSON.stringify(breadcrumbList)} type="application/ld+json" />
-<script is:inline set:html={JSON.stringify(person)} type="application/ld+json" />
-<script is:inline set:html={JSON.stringify(article)} type="application/ld+json" />
+<script is:inline set:html={JSON.stringify(website)} type='application/ld+json' />
+<script is:inline set:html={JSON.stringify(organization)} type='application/ld+json' />
+<script is:inline set:html={JSON.stringify(breadcrumbList)} type='application/ld+json' />
+<script is:inline set:html={JSON.stringify(person)} type='application/ld+json' />
+<script is:inline set:html={JSON.stringify(article)} type='application/ld+json' />
